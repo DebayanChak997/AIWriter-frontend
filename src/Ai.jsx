@@ -24,7 +24,7 @@ const Ai =()=>{
     var [uname, setuname] = useState("");
     const {register, handleSubmit, formState: { errors } } = useForm() ;
     const onSubmit = data => axios.post(
-            "http://127.0.0.1:8004/api/handleaidata/",
+            "http://iemaiwriter-alb-1120577059.ap-south-1.elb.amazonaws.com/api/handleaidata/",
             data
             ) 
             .then(res => console.log(res));
