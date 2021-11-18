@@ -94,6 +94,9 @@ const Ai =()=>{
                     fire.database().ref("users/userdetails"+"/"+name+"/writers_coin").set(coins);}
                   window.location.reload();
                 } else if (result.isDenied) {
+                    if(coins > 0){
+                      coins = coins - 1;
+                    fire.database().ref("users/userdetails"+"/"+name+"/writers_coin").set(coins);}
                   history.push('/')
                 }
               })
